@@ -1,0 +1,11 @@
+<h1>Result</h1>
+
+<% if @flagTest1 == false %>
+  <p>Sorry but <strong><%= @word %></strong> can't be built out of <%= params[:letters].join(", ") %></p>
+<% elsif @flagTest2 == false %>
+  <p>Sorry but <strong><%= @word %></strong> does not seem to be a valid English word...</p>
+<% else %>
+   <p><strong>Congralutations!</strong> <%= @word %> is a valid English word!</p>
+<% end %>
+
+<%= link_to "Play again", new_path, style: "text-decoration: none;" %>
